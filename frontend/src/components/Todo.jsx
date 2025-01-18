@@ -22,7 +22,7 @@ const Todo = () => {
 
     setIsLoading(true); // Start loading
     try {
-      const response = await axios.get('http://localhost:3000/api/v1/user/todos', {
+      const response = await axios.get('https://full-stack-todolist.onrender.com/api/v1/user/todos', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -102,7 +102,7 @@ const Todo = () => {
 
   const handleDeleteTask = async (todoId) => {
     try {
-      await axios.delete(`http://localhost:3000/api/v1/user/todos/${todoId}`, {
+      await axios.delete(`https://full-stack-todolist.onrender.com/api/v1/user/todos/${todoId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -130,7 +130,7 @@ const Todo = () => {
 
     try {
       await axios.put(
-        `http://localhost:3000/api/v1/user/todos/${currentTodo._id}`,
+        `https://full-stack-todolist.onrender.com/api/v1/user/todos/${currentTodo._id}`,
         { title, description },
         {
           headers: {
