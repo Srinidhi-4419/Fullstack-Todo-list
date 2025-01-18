@@ -25,7 +25,7 @@ const SignUp = ({ setIsAuthenticated }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:3000/api/v1/user/signup', formData)
+      .post(https://full-stack-todolist.onrender.com/api/v1/user/signup', formData)
       .then((response) => {
         toast.success('SignUp successful');
         localStorage.setItem('token', response.data.token);
